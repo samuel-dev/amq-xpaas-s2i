@@ -100,7 +100,7 @@
                 (i.e. messageTTL="-1") but create demand subscription only to the next connected
                 broker (i.e. consumerTTL="1"). See AMQ-4607.
             -->
-            <networkConnector userName="amq-demo-user" password="password" uri="kube://broker-amq-tcp:61616/?transportType=tcp" messageTTL="-1" consumerTTL="1" />
+            <!-- ##### MESH_CONFIG ##### -->
         </networkConnectors>
 
         <!--
@@ -115,7 +115,7 @@
         </persistenceAdapter>
 
         <plugins>
-            <jaasAuthenticationPlugin configuration="activemq" />
+            <!-- ##### AUTHENTICATION ##### -->
         </plugins>
 
         <!--
@@ -131,7 +131,7 @@
                     <memoryUsage percentOfJvmHeap="70" />
                 </memoryUsage>
                 <storeUsage>
-                    <storeUsage limit="1 gb" />
+                    <storeUsage limit="##### STORE_USAGE #####" />
                 </storeUsage>
                 <tempUsage>
                     <tempUsage limit="50 gb" />
@@ -145,17 +145,9 @@
 
             http://activemq.apache.org/configuring-transports.html
         -->
-        <transportConnectors>
-            <transportConnector name="openwire" uri="tcp://0.0.0.0:61616?maximumConnections=1000&amp;wireFormat.maxFrameSize=104857600" />
-            <transportConnector name="ssl" uri="ssl://0.0.0.0:61617?maximumConnections=1000&amp;wireFormat.maxFrameSize=104857600" />
-        </transportConnectors>
+        <!-- ##### TRANSPORT_CONNECTORS ##### -->
 
-        <sslContext>
-            <sslContext keyStore="file:/etc/amq-secret-volume/broker.ks"
-                        keyStorePassword="password"
-                        trustStore="file:/etc/amq-secret-volume/broker.ts"
-                        trustStorePassword="password" />
-        </sslContext>
+        <!-- ##### SSL_CONTEXT ##### -->
 
         <!-- destroy the spring context on shutdown to stop jetty -->
         <shutdownHooks>
