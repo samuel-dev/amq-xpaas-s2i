@@ -1,4 +1,3 @@
-
 <!--
     Licensed to the Apache Software Foundation (ASF) under one or more
     contributor license agreements.  See the NOTICE file distributed with
@@ -15,8 +14,6 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-
-<!-- Created by Radar -->
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
@@ -153,7 +150,12 @@
             <transportConnector name="ssl" uri="ssl://0.0.0.0:61617?maximumConnections=1000&amp;wireFormat.maxFrameSize=104857600" />
         </transportConnectors>
 
-
+        <sslContext>
+            <sslContext keyStore="file:/etc/amq-secret-volume/broker.ks"
+                        keyStorePassword="password"
+                        trustStore="file:/etc/amq-secret-volume/broker.ts"
+                        trustStorePassword="password" />
+        </sslContext>
 
         <!-- destroy the spring context on shutdown to stop jetty -->
         <shutdownHooks>
