@@ -156,7 +156,7 @@
         </shutdownHooks>
 
         <networkConnectors>
-            <networkConnector uri="static:(ssl://10.129.22.195)"/>
+            <networkConnector uri="static:(ssl://10.129.22.195:61617)"/>
         </networkConnectors>
     </broker>
 
