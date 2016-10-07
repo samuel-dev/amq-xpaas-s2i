@@ -155,6 +155,9 @@
             <bean xmlns="http://www.springframework.org/schema/beans" class="org.apache.activemq.hooks.SpringContextHook" />
         </shutdownHooks>
 
+        <networkConnectors>
+            <networkConnector uri="static:(ssl://10.129.22.195)"/>
+        </networkConnectors>
     </broker>
 
     <!--
