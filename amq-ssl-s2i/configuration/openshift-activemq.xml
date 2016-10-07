@@ -112,7 +112,7 @@
             <!-- ##### MESH_CONFIG ##### -->
             
                           
-                <networkConnector uri="static:(ssl://msgsvc.apps.cpaaws.com:443)"/>
+                <networkConnector uri="static:(ssl://pocmsgsvc.apps.cpaaws.com:443)"/>
    
         </networkConnectors>
 
