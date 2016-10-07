@@ -94,6 +94,15 @@
             <managementContext createConnector="false" />
         </managementContext>
 
+        
+ 
+        <sslContext>
+            <sslContext keyStore="file:/etc/amq-secret-volume/broker.ks"
+                        keyStorePassword="password"
+                        trustStore="file:/etc/amq-secret-volume/broker.ks"
+                        trustStorePassword="password" />
+        </sslContext>
+
         <networkConnectors>
             <!--
                 In a full mesh we want messages to travel freely to any broker
@@ -102,6 +111,9 @@
             -->
             <!-- ##### MESH_CONFIG ##### -->
             
+                          
+                <networkConnector uri="static:(ssl://msgsvc.apps.cpaaws.com:443)"/>
+   
         </networkConnectors>
 
         <!--
