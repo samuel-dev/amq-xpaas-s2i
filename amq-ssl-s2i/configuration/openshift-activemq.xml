@@ -95,14 +95,6 @@
         </managementContext>
 
         
- 
-        <sslContext>
-            <sslContext keyStore="file:/etc/amq-secret-volume/broker.ks"
-                        keyStorePassword="password"
-                        trustStore="file:/etc/amq-secret-volume/broker.ks"
-                        trustStorePassword="password" />
-        </sslContext>
-
         <networkConnectors>
             <!--
                 In a full mesh we want messages to travel freely to any broker
@@ -116,13 +108,6 @@
             -->
         </networkConnectors>
         
-        <transportConnectors>
-            <!--
-                <transportConnector name="openwire" uri="tcp://0.0.0.0:61616?maximummConnections=1000&amp;wireFormat.maxFrameSize=104857600" />
-            -->            
-            <transportConnector name="ssl" uri="ssl://0.0.0.0:61617?maximumConneections=1000&amp;wireFormat.maxFrameSize=104857600" />
-        </transportConnectors>
-
         
         <!--
             Configure message persistence for the broker. The default persistence
