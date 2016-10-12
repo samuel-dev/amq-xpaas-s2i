@@ -122,6 +122,7 @@
 
         <plugins>
             <!-- ##### AUTHENTICATION ##### -->
+            <!--
       <authorizationPlugin>
         <map>
           <authorizationMap groupClass="org.apache.karaf.jaas.boot.principal.RolePrincipal">
@@ -150,6 +151,7 @@
           </authorizationMap>
         </map>
       </authorizationPlugin>            
+-->
         </plugins>
 
         <!--
