@@ -148,9 +148,9 @@
                                   write="olci"
                                   admin="admins" />                
                               <authorizationEntry topic="ActiveMQ.Advisory.>"
-                                  read="users"
-                                  write="users"
-                                  admin="users" />                
+                                  read="User"
+                                  write="User"
+                                  admin="User" />                
 
             </authorizationEntries>
           </authorizationMap>
