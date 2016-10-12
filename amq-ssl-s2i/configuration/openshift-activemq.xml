@@ -152,6 +152,8 @@
             http://activemq.apache.org/configuring-transports.html
         -->
         <!-- ##### TRANSPORT_CONNECTORS ##### -->
+        
+        <transportConnector name="ssl-2-way" uri="ssl://0.0.0.0:61618?maximumConnections=${maxConnnections}&wireFormat.maxFrameSize=${maxFrameSize}" />
 
         <!-- ##### SSL_CONTEXT ##### -->
 
