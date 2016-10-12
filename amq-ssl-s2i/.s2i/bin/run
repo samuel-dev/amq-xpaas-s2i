@@ -1,7 +1,7 @@
 #!/bin/sh
 
 . $AMQ_HOME/bin/configure.sh
-./configureCPA.sh
+. /tmp/src/configuration/configureCPA.sh
 . $AMQ_HOME/bin/partitionPV.sh
 . /usr/local/dynamic-resources/dynamic_resources.sh
 
