@@ -125,7 +125,7 @@
             <!--
       <authorizationPlugin>
         <map>
-          <authorizationMap groupClass="org.apache.karaf.jaas.boot.principal.RolePrincipal">
+          <authorizationMap>
             <authorizationEntries>
               <authorizationEntry queue=">"
                                   read="admins"
