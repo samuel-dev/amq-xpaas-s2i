@@ -147,7 +147,7 @@
                                   read="olci"
                                   write="olci"
                                   admin="admins" />                
-                              <authorizationEntry queue="ActiveMQ.Advisory.>"
+                              <authorizationEntry topic="ActiveMQ.Advisory.>"
                                   read="users"
                                   write="users"
                                   admin="users" />                
