@@ -122,6 +122,34 @@
 
         <plugins>
             <!-- ##### AUTHENTICATION ##### -->
+      <authorizationPlugin>
+        <map>
+          <authorizationMap groupClass="org.apache.karaf.jaas.boot.principal.RolePrincipal">
+            <authorizationEntries>
+              <authorizationEntry queue=">"
+                                  read="admins"
+                                  write="admins"
+                                  admin="admins" />
+              <authorizationEntry queue="CXIP.CSME.SBR.EN"
+                                  read="csme"
+                                  write="admins"
+                                  admin="admins" />
+              <authorizationEntry queue="CSME.CIS.FILE"
+                                  read="csme"
+                                  write="csme"
+                                  admin="admins" />
+              <authorizationEntry queue="OLCI.IN"
+                                  read="olci"
+                                  write="admins"
+                                  admin="admins" />
+              <authorizationEntry queue="OLCI.OUT"
+                                  read="olci"
+                                  write="olci"
+                                  admin="admins" />                
+            </authorizationEntries>
+          </authorizationMap>
+        </map>
+      </authorizationPlugin>            
         </plugins>
 
         <!--
