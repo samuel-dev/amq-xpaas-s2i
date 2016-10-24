@@ -123,7 +123,7 @@
             -->
           <jdbcPersistenceAdapter dataDirectory="${activemq.data}" dataSource="#mysql-ds" lockKeepAlivePeriod="5000">
             <locker>
-                <lease-database-locker lockAcquireSleepInterval="10000" leaseHolderId=${HOSTNAME} />
+                <lease-database-locker lockAcquireSleepInterval="10000" leaseHolderId="${HOSTNAME}" />
             </locker>
           </jdbcPersistenceAdapter>
         </persistenceAdapter>
