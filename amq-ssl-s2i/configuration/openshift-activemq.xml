@@ -42,7 +42,8 @@
         <destinationPolicy>
             <policyMap>
                 <policyEntries>
-                    <policyEntry queue=">" producerFlowControl="true" memoryLimit="20mb" maxBrowsePageSize="700">
+                    <!-- <policyEntry queue=">" producerFlowControl="true" memoryLimit="20mb" maxBrowsePageSize="700"> -->
+                    <policyEntry queue=">" producerFlowControl="true" memoryLimit="100mb" maxBrowsePageSize="10" maxExpirePageSize="10" maxPageSize="10">
                         <!--
                             Allow messages to be replayed back to original broker if there is demand.
                             (replayWhenNoConsumers="true").
